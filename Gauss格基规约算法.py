@@ -43,9 +43,9 @@ def Gauss(x, y):
     finished = False
     while not finished:
         steps.append((Vector(v1.data), Vector(v2.data)))
-        m = round(v2.dot_product(v1) / v1.dot_product(v1))
+        m = round(v2.dot_product(v1) / v1.dot_product(v1))# dot_product点积、round四舍五入
         v2 = v2 - m * v1
-        if v1.norm() <= v2.norm():
+        if v1.norm() <= v2.norm():#比较v1、v2范数
             finished = True
         else:
             v1, v2 = v2, v1
